@@ -9,7 +9,7 @@ import okhttp3.Response;
 import java.io.IOException;
 
 public class WeatherService {
-    private final String apiKey = "94be10cd2a0492351be86538e76fca86"; 
+    private final String apiKey = "YOUR_API_KEY"; // Replace this with your API key 
 
     private OkHttpClient client = new OkHttpClient(); 
 
