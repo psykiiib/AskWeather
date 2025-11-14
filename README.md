@@ -10,6 +10,7 @@ This is a simple Java-based weather app that fetches current weather data of the
 ## Setup
 
 **1. Clone the repository:**
+
     ```bash
     git clone https://github.com/psykiiib/AskWeather.git
     cd AskWeather
