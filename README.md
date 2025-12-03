@@ -101,11 +101,54 @@ mvn exec:java
 
 **5. Enter the name of the city when prompted.**
 
-```
+```bash
 Enter the city for weather information:
 Paris
 Weather in Paris: 15.92°C
 ```
+
+---
+
+## Development & Quality Assurance
+
+This project uses standard industry tooling to ensure code quality and stability.
+
+**1. Static Code Analysis**
+We use the *Maven Checkstyle Plugin* to enforce coding standards and prevent style errors.
+- See `checkstyle.xml` in the root directory.
+
+**How to run analysis:**
+```bash
+mvn checkstyle:check
+```
+
+**2. Automation**
+We use *pre-commit* to automatically check code quality before git allows a commit.
+
+- See `.pre-commit-config.yaml` in the root directory.
+
+**How to install:**
+
+```bash
+pip install pre-commit //Install the tool, requires Python)
+pre-commit install // Install the git hook
+```
+
+**3. Testing**
+- Unit Tests: We use *JUnit 5* for testing. 
+
+**Run tests using:**
+```bash
+mvn test
+```
+
+**4.Logging**
+
+Relevant logging is implemented using *SLF4J & Logback* to track application flow and errors (instead of `System.out.println`). 
+- Logs are output to the console.
+
+
+
 
 ## Future Features
 - Support for multiple cities.
