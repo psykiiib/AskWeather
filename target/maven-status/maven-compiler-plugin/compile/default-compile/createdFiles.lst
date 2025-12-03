@@ -2,6 +2,7 @@ com\weatherapp\models\WeatherResponse$Sys.class
 com\weatherapp\Main.class
 com\weatherapp\models\WeatherResponse$Weather.class
 com\weatherapp\models\WeatherResponse$Wind.class
+com\weatherapp\WeatherUtils.class
 com\weatherapp\models\WeatherResponse.class
 com\weatherapp\models\WeatherResponse$Coord.class
 com\weatherapp\models\WeatherResponse$Main.class
