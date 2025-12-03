@@ -147,9 +147,11 @@ mvn test
 Relevant logging is implemented using *SLF4J & Logback* to track application flow and errors (instead of `System.out.println`). 
 - Logs are output to the console.
 
+---
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
-
+---
 ## Future Features
 - Support for multiple cities.
 - Hourly weather forecast.
