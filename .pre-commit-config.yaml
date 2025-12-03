@@ -1,0 +1,9 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: maven-checkstyle
+        name: Maven Checkstyle
+        entry: mvn checkstyle:check
+        language: system
+        types: [java]
+        pass_filenames: false
