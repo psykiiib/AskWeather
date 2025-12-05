@@ -1,5 +1,13 @@
 package com.weatherapp;
 
+/**
+ * Entry point for the Weather Application.
+ * <p>
+ * This class handles the user input via CLI and orchestrates the flow
+ * between the WeatherService and the user.
+ * </p>
+ */
+
 import java.io.IOException;
 import java.util.Scanner;
 import org.slf4j.Logger;

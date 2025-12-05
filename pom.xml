@@ -83,6 +83,18 @@
         </configuration>
       </plugin>
 
+
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>3.6.0</version>
+          <configuration>
+              <show>private</show>
+              <nohelp>true</nohelp>
+          </configuration>
+      </plugin>
+
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
