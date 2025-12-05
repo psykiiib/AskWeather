@@ -97,4 +97,4 @@ Weather in Paris: 5.92°C
 ### Troubleshooting
 - "**Failed to retrieve weather data**": Check that your API Key in WeatherService.java is correct and active.
 
-- "**mvn command not found**": Ensure Maven is added to your system PATH (see README).
+- "**mvn command not found**": Ensure Maven is added to your system PATH (see [README](../../README.md)). 
