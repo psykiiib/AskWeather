@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskWeather Documentation</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #333;
+            --bg-color: #f9fafb;
+            --code-bg: #1e293b;
+            --code-text: #e2e8f0;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            padding: 40px;
+            margin: 40px 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #111;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #1f2937;
+            font-size: 1.5rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #374151;
+        }
+
+        p, li {
+            font-size: 1.05rem;
+            color: #4b5563;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 20px 0;
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        p code, li code {
+            background-color: #e5e7eb;
+            color: #1f2937;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .alert {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .alert strong {
+            color: #1e40af;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 40px 0;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to AskWeather</h1>
+        <p>This is a Dockerized Java application that fetches weather data.</p>
+        
+        <hr>
+
+        <h2>How to use:</h2>
+        <p>Follow this guide to set up, build, and run the application on your local machine.</p>
+
+        <h3>Prerequisites</h3>
+        <p>Before we begin, we must verify your development environment. This project relies on <strong>Java</strong> and <strong>Maven</strong>.</p>
+
+        <ul>
+            <li>
+                <strong>Verify Java:</strong> Run <code>java -version</code> (Requires JDK 17+).
+            </li>
+            <li>
+                <strong>Verify Maven:</strong> Run <code>mvn -version</code>.
+            </li>
+        </ul>
+
+        <h3>Step 1: Get the Code</h3>
+        <pre><code>git clone https://github.com/psykiiib/AskWeather.git
+cd AskWeather</code></pre>
+
+        <h3>Step 2: Configure the API Key</h3>
+        <div class="alert">
+            <p><strong>Crucial Step:</strong> The application requires an OpenWeatherMap API key to fetch real data.</p>
+        </div>
+        <ul>
+            <li>Open <code>src/main/java/com/weatherapp/WeatherService.java</code>.</li>
+            <li>Replace the placeholder <code>apiKey</code> with your actual key.</li>
+        </ul>
+
+        <h3>Step 3: Build the Project</h3>
+        <p>Run the following command to download dependencies and compile:</p>
+        <pre><code>mvn clean install</code></pre>
+
+        <h3>Step 4: Run the Application</h3>
+        <p>Start the interactive mode:</p>
+        <pre><code>mvn exec:java</code></pre>
+
+        <h3>Step 5: Fetch Weather Data</h3>
+        <p>Once running, enter a city name when prompted:</p>
+        <pre><code>Enter the city for weather information:
+> Paris
+Weather in Paris: 5.92°C</code></pre>
+
+        <hr>
+
+        <h2>Troubleshooting</h2>
+        <ul>
+            <li><strong>"Failed to retrieve weather data"</strong>: Check your API Key in <code>WeatherService.java</code>.</li>
+            <li><strong>"mvn command not found"</strong>: Ensure Maven is installed and in your system PATH.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
